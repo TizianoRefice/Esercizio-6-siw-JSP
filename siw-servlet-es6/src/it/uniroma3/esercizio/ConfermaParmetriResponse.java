@@ -36,7 +36,8 @@ public class ConfermaParmetriResponse extends HttpServlet {
 		out.println("<h1>Dati inseriti nella form</h1>");
 		out.println("<ul>");
 		out.println("<li>Nome: <b>" + session.getAttribute("NOME") + "</b></li>");
-		out.println("<li>Cognome: <b>" + session.getAttribute("COGNOME") + "</b></li>"); //prendo i dati dalla sessione
+		out.println("<li>Cognome: <b>" + session.getAttribute("COGNOME") + "</b></li>");
+		out.println("<li>Cognome: <b>" + session.getAttribute("dataDiNascita") + "</b></li>");//prendo i dati dalla sessione
 		out.println("</ul>");
 		out.println("<h2>Scegli:</h2>");
 		out.println("<ul>");

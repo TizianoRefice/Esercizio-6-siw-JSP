@@ -24,11 +24,13 @@ public class ProcessaParametriRequest extends HttpServlet {
 
 		String nome = request.getParameter("nome").toUpperCase();
 		String cognome = request.getParameter("cognome").toUpperCase();
+		String dataNascita = request.getParameter("dataDiNascita");
 
 
 		HttpSession session = request.getSession();
 		session.setAttribute("NOME", nome);
-		session.setAttribute("COGNOME", cognome); // in questo modo salvo i dati nella sessione!
+		session.setAttribute("COGNOME", cognome); 
+		session.setAttribute("dataDiNascita", dataNascita);// in questo modo salvo i dati nella sessione!
 
 		ServletContext application  = getServletContext();
 		RequestDispatcher rd = application.getRequestDispatcher("/confermaDati");
